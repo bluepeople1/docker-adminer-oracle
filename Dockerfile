@@ -13,6 +13,7 @@ RUN apk add php7-pear php7-dev gcc musl-dev libnsl libaio make &&\
     unzip -d /usr/local/ /tmp/basic.zip && \
     unzip -d /usr/local/ /tmp/sdk.zip && \
     ln -s /usr/local/instantclient_19_6 ${ORACLE_HOME} && \
+    ln -s /usr/local/instantclient/libclntsh.so.* ${ORACLE_HOME}/libclntsh.so && \
     ln -s /usr/local/instantclient/lib* /usr/lib && \
     ln -s /usr/lib/libnsl.so.2.0.0  /usr/lib/libnsl.so.1
 #     ln -s /usr/local/instantclient/sqlplus /usr/bin/sqlplus
